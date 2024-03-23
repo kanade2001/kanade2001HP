@@ -1,0 +1,4 @@
+baseURL = 'https://kanade2001.netlify.app'
+languageCode = 'ja'
+title = 'Kanadeのほーむぺーじ'
+theme = 'minimal'
