@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programmings on Kanadeのほーむぺーじ</title>
-    <link>http://localhost:1313/programming/</link>
+    <link>http://localhost:62673/programming/</link>
     <description>Recent content in Programmings on Kanadeのほーむぺーじ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 24 Mar 2024 02:28:33 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/programming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:62673/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/programming/programming/</link>
+      <link>http://localhost:62673/programming/programming/</link>
       <pubDate>Sun, 24 Mar 2024 02:28:33 +0900</pubDate>
-      <guid>http://localhost:1313/programming/programming/</guid>
+      <guid>http://localhost:62673/programming/programming/</guid>
       <description>プログラミングとっぷぺーじ</description>
     </item>
   </channel>
