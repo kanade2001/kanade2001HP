@@ -1,10 +1,10 @@
-name = 'Theme name'
+name = 'Kanade2001hugoTheme'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
-description = 'Theme description'
+licenselink = 'https://github.com/kanade2001/kanade2001hugotheme/LICENSE'
+description = 'HUGO Theme for Kanade2001HP'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
+homepage = 'https://github.com/kanade2001/kanade2001hugotheme'
 
 # If you have a running demo of the theme
 demosite = 'https://owner.github.io/repo'

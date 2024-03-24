@@ -1,4 +1,5 @@
 baseURL = 'https://kanade2001.netlify.app'
 languageCode = 'ja'
 title = 'Kanadeのほーむぺーじ'
-theme = 'github-style'
+# theme = 'github-style'
+theme = 'kanade2001theme'

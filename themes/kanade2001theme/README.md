@@ -1,4 +1,4 @@
-# Theme Name
+# Kanade2001Theme
 
 ## Features
 

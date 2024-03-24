@@ -1,0 +1,6 @@
+/* styles.css */
+
+body {
+    background-color: blue;
+    color: white; /* 背景色が青の場合、テキストは白にすると読みやすいです */
+}
