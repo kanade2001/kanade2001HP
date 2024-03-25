@@ -1,0 +1,19 @@
+.maincolor-b {
+    background-color: blue;
+}
+
+.subcolor-b {
+    background-color: lightblue;
+}
+
+.black-b {
+    background-color: black;
+}
+
+.oppmaincolor {
+    color: white;
+}
+
+.oppsubcolor {
+    color: black;
+}
