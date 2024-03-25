@@ -1,0 +1,10 @@
+<div class="change-log">
+    <h2>更新情報！</h2>
+    <div class="log">
+        <ul>
+            {{ range .Site.Params.news }}
+            <li>{{.}}</li>
+            {{ end }}
+        </ul>
+    </div>
+</div>

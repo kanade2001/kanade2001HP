@@ -6,6 +6,41 @@
 
 <body>
     <div class="index-header">
+        <style>
+            .index-header {
+                height: 400px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+            }
+            
+            .index-header img {
+                height: 50%;
+                position: absolute;
+            }
+            
+            
+            .index-header-upper {
+                color: var(--lightText);
+                background-color: var(--darkColor);
+                height: 50%;
+                width:100%;
+            }
+            
+            .index-header-lower {
+                color: var(--darkText);
+                background-color: var(--lightColor);
+                height: 50%;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+        </style>
         <div class="index-header-upper">
             <h1>Kanadeのほーむぺーじ</h1>
         </div>
@@ -18,10 +53,8 @@
 
     {{ partial "header" . }}
 
-    <div class="change-log">
-        いいかんじの更新履歴
-    </div>
-    <div class="sns-links">
-        いいかんじのSNSリンク
-    </div>
+    {{ partial "change-log" . }}
+
+    {{ partial "footer" . }}
+
 </body>

@@ -1,19 +1,6 @@
-.maincolor-b {
-    background-color: blue;
-}
-
-.subcolor-b {
-    background-color: lightblue;
-}
-
-.black-b {
-    background-color: black;
-}
-
-.oppmaincolor {
-    color: white;
-}
-
-.oppsubcolor {
-    color: black;
+:root {
+    --darkColor: #274A78;
+    --lightColor: #C6DBFD;
+    --lightText: white;
+    --darkText: black;
 }

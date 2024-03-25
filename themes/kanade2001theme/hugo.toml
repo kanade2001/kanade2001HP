@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://kanade2001.netlify.app'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Kanadeのほーむぺーじ'
 
 [[menus.main]]
 name = 'Home'
@@ -21,3 +21,8 @@ weight = 30
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+[params]
+    news = [
+        "2024/03/25: ホームページ開設"
+    ]
