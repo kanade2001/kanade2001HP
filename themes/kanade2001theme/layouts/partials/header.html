@@ -1,8 +1,29 @@
 <header>
-    <div class="row-container">
-        <a href="#" class="button">プログラミング</a>
-        <a href="#" class="button">電子工作</a>
-        <a href="#" class="button">旅行</a>
-        <a href="#" class="button">雑記</a>
+    <div class="header-container">
+        <div class="header-left">
+            <div><img src="/images/icon.png" alt="Icon" class="rounded-image"></div>
+            <div>Kanade2001HP</div>
+        </div>
+        <div class="header-right">
+            <button class="hamburger-menu" id="header-menubutton">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu" id="header-menu">
+                <ul>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#">プログラミング</a></li>
+                    <li><a href="#">電子工作</a></li>
+                    <li><a href="#">旅行</a></li>
+                    <li><a href="#">雑記</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <script>
+                document.getElementById('header-menubutton').addEventListener('click', function() {
+                    document.getElementById('header-menu').classList.toggle('show-menu');
+                });
+            </script>
+        </div>
     </div>
 </header>
