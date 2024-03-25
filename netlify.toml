@@ -1,5 +1,5 @@
-HUGO_VERSION = "0.124.0"
-TZ = "America/Los_Angeles"
+HUGO_VERSION = "0.124.1"
+TZ = "Asia/Tokyo"
 
 [build]
 publish = "public"
