@@ -5,7 +5,7 @@
 {{ partial "head" . }}
 
 <body>
-    <header>
+    <div class="column-container">
         <div class="index-header">
             <style>
                 .index-header {
@@ -41,22 +41,25 @@
                     align-items: flex-end;
                     justify-content: center;
                 }
+            
             </style>
             <div class="index-header-upper">
                 <h1>Kanadeのほーむぺーじ</h1>
             </div>
             <img src="/images/icon.png" alt="Icon" class="rounded-image">
             <div class="index-header-lower">
-                <h2>プログラミング、電子工作、旅行 etc</h2>
+                <h2></h2>
             </div>
         </div>
-        <div class="row-container">
-            <a href="#" class="button">プログラミング</a>
-            <a href="#" class="button">電子工作</a>
-            <a href="#" class="button">旅行</a>
-            <a href="#" class="button">雑記</a>
+        <div class="tabbar">
+            <div class="row-container">
+                <a href="#" class="button">プログラミング</a>
+                <a href="#" class="button">電子工作</a>
+                <a href="#" class="button">旅行</a>
+                <a href="#" class="button">雑記</a>
+            </div>
         </div>
-    </header>
+    </div>
 
     {{ partial "change-log" . }}
 
