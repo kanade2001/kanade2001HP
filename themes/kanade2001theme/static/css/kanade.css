@@ -60,16 +60,50 @@ footer {
 }
 
 .button.black{
-    color: black;
+    color: var(--darkText);
 }
 .button.white{
-    color: white;
+    color: var(--lightText);
+}
+
+
+
+
+
+
+/*Image*/
+
+.rounded-image {
+    border-radius: 50%;
+}
+
+.header-button {
+    text-decoration: none;
+    display: flex;
+}
+
+.header-icon {
+    background-color: green;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.header-icon img {
+    height: 90%;
+    margin: 5%;
+}
+
+.header-title {
+    background-color: red;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--lightText);
 }
 
 .hamburger-menu {
+    background-color: white;
     width:48px;
     height:48px;
-    background-color: white;
     color: black;
     font-size: 36px;
 }
@@ -85,16 +119,13 @@ footer {
     padding: 5px;
 }
 
-
 .show-menu {
     display: block;
 }
 
-/*Image*/
 
-.rounded-image {
-    border-radius: 50%;
-}
+
+
 
 
 .header-container {
@@ -104,6 +135,7 @@ footer {
     display: flex;
 
     position: relative;
+    justify-content: space-between;
 }
 .header-left {
     color: var(--lightText);
@@ -113,21 +145,17 @@ footer {
     align-items: center;
 }
 
-.header-left img {
-    height: 80%;
-    margin: 5px;
-}
-
-.header-left.icon {
+.header-left-icon {
     background-color: green;
     height: 100%;
 }
 
-.header-left.icon img {
-    padding: 5%
+.header-left-icon img {
+    height: 90%;
+    margin: 5%;
 }
 
-.header-left.title{
+.header-left-title{
     height: 100%;
     background-color: red;
 }
