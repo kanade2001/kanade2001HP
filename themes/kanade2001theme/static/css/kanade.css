@@ -120,12 +120,11 @@ footer {
 
 .header-left.icon {
     background-color: green;
-    height: 80%;
-    margin: 5px;
+    height: 100%;
 }
 
 .header-left.icon img {
-    height: 100%;
+    padding: 5%
 }
 
 .header-left.title{
