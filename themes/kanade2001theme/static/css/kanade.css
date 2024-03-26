@@ -128,7 +128,13 @@ footer {
     height: 100%;
 }
 
+.header-left.title{
+    height: 100%;
+    background-color: red;
+}
+
 .header-right {
+    background-color: yellow;
     flex-grow: 1;
     justify-content: flex-end;
     display: flex;
