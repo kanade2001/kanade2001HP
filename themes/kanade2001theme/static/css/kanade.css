@@ -30,6 +30,7 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding-top: 20px;
 }
 
 .row-container {
@@ -42,6 +43,7 @@ footer {
 
 /*Button*/
 .tabbar {
+    padding: 10px;
     background-color: var(--darkColor);
     width: 100%;
     display: flex;
@@ -51,20 +53,25 @@ footer {
 
 .button {
     display: inline-block;
-    padding: 10px 0px;
+    padding: 0px 0px;
     flex: 1;
     border: none;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
-    color: var(--lightText);
+}
+
+.button.black{
+    color: black;
+}
+.button.white{
+    color: white;
 }
 
 .hamburger-menu {
     width:48px;
     height:48px;
-    margin-left: auto;
     background-color: white;
     color: black;
     font-size: 36px;
@@ -80,6 +87,7 @@ footer {
     border: 1px solid black;
     padding: 5px;
 }
+
 
 .show-menu {
     display: block;
@@ -98,13 +106,13 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
-
 .header-left {
-
     display: flex;
     font-size: 36px;
-    color: var(--lightText)
+    color: var(--lightText);
+    position: relative;
 }
 
 .header-left img {
