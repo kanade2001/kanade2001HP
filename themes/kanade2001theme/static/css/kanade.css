@@ -1,7 +1,6 @@
 header {
     background-color: var(--darkColor);
     width: 100%;
-
 }
 
 body {
@@ -103,7 +102,7 @@ footer {
     height: 50px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+
     position: relative;
 }
 .header-left {
@@ -119,6 +118,8 @@ footer {
 }
 
 .header-right {
+    flex-grow: 1;
+    justify-content: flex-end;
     display: flex;
     position: relative;
 }
