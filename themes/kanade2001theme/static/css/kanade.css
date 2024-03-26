@@ -106,10 +106,11 @@ footer {
     position: relative;
 }
 .header-left {
-    display: flex;
-    font-size: 36px;
     color: var(--lightText);
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .header-left img {
