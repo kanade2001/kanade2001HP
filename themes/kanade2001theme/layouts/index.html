@@ -57,8 +57,31 @@
         </div>
     </header>
 
+    <main>
+        <div class="logbox">
+            <h2>新着記事</h2>
+            <div class="log">
+                {{ range first 10 .Site.RegularPages.ByDate.Reverse }}
+                <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+                {{ .Summary }}
+            {{ end }}
+            </div>
+        </div>
 
-    {{ partial "change-log" . }}
+        しんちゃくかれんだー
+
+        <div class="logbox">
+            <h2>更新情報</h2>
+            <div class="log">
+                <ul>
+                    {{ range .Site.Params.news }}
+                    <li>{{.}}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        {{ .Content }}
+    </main>
 
     {{ partial "footer" . }}
 
