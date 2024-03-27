@@ -12,8 +12,17 @@
         </div>
     </div>
 
-    <div>
+    <div class="logbox">
         <h2>過去記事</h2>
+        <div class="log">
+            {{ with readDir "/content/programming" }}
+                {{ range . }}
+                    {{if .IsDir }}
+                        <h2>{{ .Name }}</h2>
+                    {{ end }}
+                {{ end }}
+            {{end}}
+        </div>
     </div>
 
 {{ end }}
