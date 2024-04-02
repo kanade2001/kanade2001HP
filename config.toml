@@ -3,3 +3,10 @@ languageCode = 'ja'
 defaultContentLanguage = 'ja'
 title = 'Kanadeのほーむぺーじ'
 theme = 'kanade2001theme'
+
+[params]
+    news = [
+        "2024/03/25: ホームページ開設"
+    ]
+    github = "https://github.com/kanade2001"
+    twitter = "https://twitter.com/kanade2001_cpp"
