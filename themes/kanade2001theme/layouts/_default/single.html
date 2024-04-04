@@ -1,13 +1,39 @@
 {{ define "main" }}
     <h1>{{ .Title }}</h1>
 
-    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-    {{ $dateHuman := .Date | time.Format ":date_long" }}
-    {{ $lastmodMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
-    {{ $lastmodHuman := .Lastmod | time.Format ":date_long" }}
-    作成日: <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time><br>
-    更新日: <time datetime="{{ $lastmodMachine }}">{{ $lastmodHuman }}</time>
+    <div class="infobox">
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        {{ $lastmodMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $lastmodHuman := .Lastmod | time.Format ":date_long" }}
+        <i class="fa-regular fa-calendar"></i> 作成日 <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time><br>
+        <i class="fa-regular fa-calendar"></i> 更新日 <time datetime="{{ $lastmodMachine }}">{{ $lastmodHuman }}</time>    
+    </div>
+    <div>
 
-    {{ .Content }}
+    </div>
+    <div class="infobox">
+        <i class="fa-solid fa-tag"></i> タグ
+    </div>
+    <div class="textbox">
+        textbox
+        {{ .Content }}
+    </div>
+    <div class="infobox">
+        <div>
+            {{ with .Parent }}
+                <a href="{{ .RelPermalink }}"><i class="fa-solid fa-link"></i> 記事一覧 {{ .LinkTitle }}</a>
+            {{ end }}
+        </div>
+        <div>
+            <a href=""><i class="fa-solid fa-link"></i> 前の記事 </a>
+        </div>
+        <div>
+            <a href=""><i class="fa-solid fa-link"></i> 次の記事 </a>
+        </div>
+
+    </div>
+
+
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

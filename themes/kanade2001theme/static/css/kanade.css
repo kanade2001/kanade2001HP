@@ -143,10 +143,33 @@ footer {
 }
 
 .log {
-    border: 2px groove var(--darkColor);
+    border: 2px solid var(--darkColor);
     background-color: var(--lightText);
     max-height: 25vh;
     overflow-y: auto;
     padding: 0 2%;
     text-decoration: none;
+}
+
+
+.textbox {
+    margin: 20px 0;
+    border: 2px solid var(--darkColor);
+    background-color: var(--lightText);
+    padding: 2% 2%;
+    text-decoration: none;
+}
+
+.infobox {
+    margin: 10px 0;
+    padding: 10px 2%;
+
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.infobox a {
+    text-decoration: none;
+    color: var(--darkText)
 }
