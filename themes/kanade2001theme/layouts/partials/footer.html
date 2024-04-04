@@ -1,8 +1,8 @@
 <footer>
     <div class="tabbar">
         <div class="row-container">
-            <a href="#" class="button white">About</a>
-            <a href="#" class="button white">Contact</a>
+            <a href='{{ absURL "about" }}' class="button white">About</a>
+            <a href='{{ absURL "contact" }}' class="button white">Contact</a>
             <a href="{{ .Site.Params.github }}" target="_blank" class="button white"><i class="fa-brands fa-github"></i> GitHub</a>
             <a href="{{ .Site.Params.twitter }}" target="_blank" class="button white"><i class="fa-brands fa-twitter"></i> Twitter(X)</a>
         </div>

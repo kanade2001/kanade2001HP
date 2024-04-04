@@ -3,9 +3,5 @@ title = 'Contact'
 date = 2024-03-24T04:27:34+09:00
 draft = false
 type = "contact"
+layout = "contact"
 +++
-
-<h2>Mail</h2>
-kanade2001.cpp@gmail.com
-
-<h2>Form</h2>
