@@ -1,5 +1,13 @@
-{{ partial "header" . }}
+<!-- 404.html -->
+<!DOCTYPE html>
+<html>
+{{ partial "head" . }}
 
-<main>
-    404だよ
-</main>
+<body>
+    {{ partial "header.html" . }}
+    <main>
+        <h1>404 not found</h1>
+    </main>
+    {{ partial "footer.html" . }}
+</body>
+</html>
