@@ -2,6 +2,23 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     <div class="logbox">
+        <h2>新着記事</h2>
+        <div class="log">
+            {{ $count := 0 }}
+            {{ range .Sections }}
+                {{ $pages := .Pages.ByDate.Reverse }}
+                {{ range $pages }}
+                    {{ if eq $count 5 }}
+                        {{ break }}
+                    {{ end }}
+                    <h2>{{ .Title }}</h2>
+                    {{ .Summary }}
+                    {{ $count = add $count 1 }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    <div class="logbox">
         <h2>過去記事</h2>
         <div class="log">
             {{ range .Sections }}
