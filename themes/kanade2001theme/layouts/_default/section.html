@@ -1,5 +1,12 @@
 {{ define "main" }}
     <h1>{{ .Title }}</h1>
     {{ .Content }}
-
+    <div class="logbox">
+        <h2>過去記事</h2>
+        <div class="log">
+            {{ range .Sections }}
+                <h2><a href="{{ .RelPermalink }}">{{ .Name }}</a></h2>
+            {{ end }}
+        </div>
+    </div>
 {{ end }}
