@@ -4,26 +4,6 @@ defaultContentLanguage = 'ja'
 title = 'Kanadeのほーむぺーじ'
 theme = 'kanade2001theme'
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
-
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
-
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
-
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
-
 [params]
     news = [
         "2024/03/25: ホームページ開設"
