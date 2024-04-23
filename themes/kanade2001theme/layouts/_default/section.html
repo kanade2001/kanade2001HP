@@ -3,7 +3,6 @@
     {{ .Content }}
     <div class="logbox">
         <h2>新着記事</h2>
-        {{ .Section }}
         <div class="log">
             {{ range first 5 (where .Site.RegularPages.ByDate.Reverse ".Parent.Section" "==" .Section )}}
                 <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -17,6 +16,16 @@
             {{ range .Sections }}
                 <h2><a href="{{ .RelPermalink }}">{{ .Name }}</a></h2>
             {{ end }}
+        </div>
+    </div>
+    <div class="logbox">
+        <h2>過去記事</h2>
+        <div class="log">
+            <ul>
+                {{ range .Sections }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
         </div>
     </div>
 {{ end }}

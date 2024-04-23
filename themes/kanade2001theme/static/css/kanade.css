@@ -34,7 +34,7 @@ footer {
 }
 
 /*Align*/
-.column-container{
+.column-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -77,14 +77,11 @@ footer {
     color: var(--lightText);
 }
 
-
-
 /* Image */
 
 .rounded-image {
     border-radius: 50%;
 }
-
 
 /* header */
 
@@ -150,7 +147,29 @@ footer {
     max-height: 25vh;
     overflow-y: auto;
     padding: 0 2%;
+    margin: 0;
     text-decoration: none;
+}
+
+.log ul {
+    padding: 0;
+    margin: 0;
+}
+
+.log li {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    list-style: none;
+}
+
+.log li:nth-child(even) {
+    background-color: red;
+}
+
+.log li:nth-child(odd) {
+    background-color: blue;
 }
 
 .textbox {
