@@ -24,7 +24,7 @@
                 {{ range .Sections }}
                     <li>
                         <div class = "listitem">
-                            <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+                            <a href="{{ .RelPermalink }}">{{ .Name }} ({{ len .Pages }})</a>
                         </div>
                     </li>
                 {{ end }}
