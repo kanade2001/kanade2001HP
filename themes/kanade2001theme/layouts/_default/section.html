@@ -6,7 +6,7 @@
         {{ .Section }}
         <div class="log">
             {{ range first 5 (where .Site.RegularPages.ByDate.Reverse ".Parent.Section" "==" .Section )}}
-                <h2>{{ .Title }}</h2>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                 {{ .Summary }}
             {{ end }}
         </div>
