@@ -1,5 +1,6 @@
 <!-- index.html -->
 <!DOCTYPE html>
+<html lang="ja">
 
 <!-- header -->
 {{ partial "head" . }}
@@ -58,31 +59,39 @@
     </header>
 
     <main>
-        <div class="logbox">
+        <div class="block">
             <h2>新着記事</h2>
-            <div class="log">
-                {{ range first 10 .Site.RegularPages.ByDate.Reverse }}
-                <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-                {{ .Summary }}
-            {{ end }}
-            </div>
-        </div>
-
-        しんちゃくかれんだー
-
-        <div class="logbox">
-            <h2>更新情報</h2>
-            <div class="log">
+            <div class="listbox">
                 <ul>
-                    {{ range .Site.Params.news }}
-                    <li>{{.}}</li>
+                    {{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "ne" "update") }}
+                        <li>
+                            <div class = "listitem">
+                                <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+                                {{ .Summary }}
+                            </div>
+                        </li>
                     {{ end }}
                 </ul>
             </div>
         </div>
-        {{ .Content }}
+
+        <div class="block">
+            <h2>更新情報</h2>
+            <div class="listbox">
+                <ul>
+                    {{ range where .Site.RegularPages "Section" "update" }}
+                    <li class="listitem">
+                        <div class="listitem">
+                            {{ .Title }}
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
     </main>
 
     {{ partial "footer" . }}
 
 </body>
+</html>
