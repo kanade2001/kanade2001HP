@@ -145,43 +145,6 @@ footer {
     padding: 10px;
 }
 
-.logbox {
-    margin: 10px 0;
-}
-
-
-
-.log {
-    border: 2px solid var(--darkColor);
-    background-color: var(--lightText);
-    max-height: 25vh;
-    overflow-y: auto;
-    padding: 0 2%;
-    margin: 0;
-    text-decoration: none;
-}
-
-.log ul {
-    padding: 0;
-    margin: 0;
-}
-
-.log li {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-
-    list-style: none;
-}
-
-.log li:nth-child(even) {
-    background-color: red;
-}
-
-.log li:nth-child(odd) {
-    background-color: blue;
-}
-
 .textbox {
     margin: 20px 0;
     border: 2px solid var(--darkColor);
@@ -252,4 +215,47 @@ footer {
 
 .listitem a:hover {
     text-decoration: underline;
+}
+
+/* codeblock */
+
+.codeblock {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.codeblock--name {
+    width: fit-content;
+    padding: 0.4rem;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    background-color: var(--darkColor);
+}
+.codeblock--main {
+    position: relative;
+    padding: 0 0.4rem;
+    background-color: rgb(39,40,34);
+}
+
+.codeblock--content {
+    font-size: 1.0rem;
+    overflow-x: auto;
+}
+
+.codeblock--copy {
+    border: none;
+    padding: 1.0rem;
+    color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.codeblock--copy:hover {
+    color: gray;
+}
+
+.codeblock--copy i {
+    font-size: 1.0rem;
 }

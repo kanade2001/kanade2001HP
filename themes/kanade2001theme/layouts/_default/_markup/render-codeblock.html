@@ -1,0 +1,13 @@
+<div class="codeblock">
+    {{- $name := .Attributes.name -}}
+    {{ with $name }}<div class="codeblock--name">{{ . }}</div>{{ end }}
+    <div class="codeblock--main">
+        <div class="codeblock--content">
+            {{- highlight (.Inner | safeHTML) .Type (dict "Linenos" true) .Options }}
+        </div>
+        <button class="codeblock--copy">
+            <i class="fa-regular fa-clipboard"></i>
+        </button>
+    </div>
+
+</div>
