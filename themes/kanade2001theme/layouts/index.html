@@ -74,7 +74,20 @@
                 </ul>
             </div>
         </div>
-
+        <div class="block">
+            <h2>タグ一覧</h2>
+            <div class="listbox">
+                <ul>
+                    {{ range $tagName, $taxonomy := .Site.Taxonomies.tags }}
+                    <li class="listitem">
+                        <div class="listitem">
+                            <a href="/tags/{{ $tagName | urlize }}">{{ $tagName }}({{ len $taxonomy }})</a>
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
         <div class="block">
             <h2>更新情報</h2>
             <div class="listbox">

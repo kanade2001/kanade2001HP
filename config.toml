@@ -10,3 +10,6 @@ theme = 'kanade2001theme'
     ]
     github = "https://github.com/kanade2001"
     twitter = "https://twitter.com/kanade2001_cpp"
+
+[taxonomies]
+    tag = "tags"
