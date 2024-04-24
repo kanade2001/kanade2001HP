@@ -1,38 +1,48 @@
 {{ define "main" }}
     <h1>{{ .Title }}</h1>
-
+    <div class="infobox--item">
+        {{range .Params.tags}}
+            <div class="infobox--border"><a href="/tags/{{ . }}">{{ . }}</a></div>
+        {{ end }}
+    </div>
     <div class="infobox">
         {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
         {{ $dateHuman := .Date | time.Format ":date_long" }}
         {{ $lastmodMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
         {{ $lastmodHuman := .Lastmod | time.Format ":date_long" }}
-        <i class="fa-regular fa-calendar"></i> 作成日 <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time><br>
-        <i class="fa-regular fa-calendar"></i> 更新日 <time datetime="{{ $lastmodMachine }}">{{ $lastmodHuman }}</time>    
-    </div>
-    <div>
-
-    </div>
-    <div class="infobox">
-        <i class="fa-solid fa-tag"></i> タグ
+        <div class="infobox--item">
+            <div><i class="fa-regular fa-calendar"></i></div>
+            <div>作成日</div>
+            <div><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time><br></div>
+        </div>
+        <div class="infobox--item">
+            <i class="fa-regular fa-calendar"></i> 更新日 <time datetime="{{ $lastmodMachine }}">{{ $lastmodHuman }}</time>    
+        </div>
     </div>
     <div class="textbox">
-        textbox
         {{ .Content }}
     </div>
     <div class="infobox">
-        <div>
-            {{ with .Parent }}
-                <a href="{{ .RelPermalink }}"><i class="fa-solid fa-link"></i> 記事一覧 {{ .LinkTitle }}</a>
+        <div class="infobox--item">
+            <div><i class="fa-solid fa-link"></i></div>
+            <div>記事一覧</div>
+            {{ with .Parent.Page.Parent }}
+                <div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
             {{ end }}
         </div>
-        <div>
-            <a href=""><i class="fa-solid fa-link"></i> 前の記事 </a>
+        <div class="infobox--item">
+            <div><i class="fa-solid fa-link"></i></div>
+            <div>前の記事</div>
+            {{ with .Parent.Pages.Prev . }}
+                <div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
+            {{ end }}
         </div>
-        <div>
-            <a href=""><i class="fa-solid fa-link"></i> 次の記事 </a>
+        <div class="infobox--item">
+            <div><i class="fa-solid fa-link"></i></div>
+            <div>次の記事</div>
+            {{ with .Parent.Pages.Next . }}
+                <div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
+            {{ end }}
         </div>
     </div>
-
-
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

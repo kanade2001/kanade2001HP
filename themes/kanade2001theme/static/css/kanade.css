@@ -128,6 +128,7 @@ footer {
 .menu {
     display: none;
     position: absolute;
+    z-index: 100;
     width:200px;
     top: 50px;
     right: 0;
@@ -156,21 +157,28 @@ footer {
 .infobox {
     margin: 10px 0;
     padding: 10px 2%;
-
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0,0,0,0.1);
 }
-
 
 .infobox a {
     text-decoration: none;
-    color: var(--darkText)
 }
 
+.infobox--item {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 0.5rem;
+    align-items: center;
+}
+.infobox--border {
+    border: solid;
+    border-color: var(--darkColor);
+    border-radius: 8px;
+    padding: 0.5rem;
 
-
-
-
+}
 
 .block {
     margin-top: 10px;
